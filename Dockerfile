@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:18.3
+FROM --platform=arm64 node:18.3
 WORKDIR /app
 COPY ./package.json /app/
 COPY ./runserver.sh /app/
