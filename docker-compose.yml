@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  black-busters:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/app
+    container_name: black-busters
+    ports:
+      - "3000:3000"
+    tty: true
+    networks:
+      - black-busters
+
+networks:
+  black-busters:
+    name: black-busters
+    driver: bridge
