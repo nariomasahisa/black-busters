@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   black-busters:
     build:
@@ -10,10 +11,11 @@ services:
     ports:
       - "3000:3000"
     tty: true
+
     networks:
-      - black-busters
+      - black-busters-network
 
 networks:
-  black-busters:
-    name: black-busters
+  black-busters-network:
+    name: black-busters-network
     driver: bridge
